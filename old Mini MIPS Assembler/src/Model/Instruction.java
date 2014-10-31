@@ -1,12 +1,11 @@
 package Model;
 
 public class Instruction {
-	private String label = "";
-	private String command = "";
+	private String label = null;
+	private String command;
 	private int memloc;
 	private boolean empty = false;
 	private boolean error = false;
-	private String error_msg = null;
 	
 	
 	public String getLabel() {
@@ -38,12 +37,6 @@ public class Instruction {
 	}
 	public void setError(boolean error) {
 		this.error = error;
-	}
-	public String getError_msg() {
-		return error_msg;
-	}
-	public void setError_msg(String error_msg) {
-		this.error_msg = error_msg;
 	}
 	
 }

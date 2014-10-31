@@ -1,7 +1,7 @@
 package Model.Instructions;
 
 import Implementation.Globals;
-import Utilities.Utilities;
+import Utilities.Conversion;
 
 public class I_Type implements InstructionFormat {
 
@@ -38,7 +38,7 @@ public class I_Type implements InstructionFormat {
 		String strRT;
 		String strImmediate;
 		
-		Utilities c = new Utilities();
+		Conversion c = new Conversion();
 		
 		strOpcode = c.decimalToBinary(opcode, 6);
 		strRS = c.decimalToBinary(rs, 5);
@@ -88,7 +88,7 @@ public class I_Type implements InstructionFormat {
 	}
 	
 	public int registerNumber(String reg) {
-		Utilities c = new Utilities();
+		Conversion c = new Conversion();
 		
 		reg = c.removeSpaces(reg);
 		
@@ -110,7 +110,7 @@ public class I_Type implements InstructionFormat {
 	}
 	
 	public int getOffset(String offset) {
-		Utilities c = new Utilities();
+		Conversion c = new Conversion();
 		
 		offset = c.removeSpaces(offset);
 		

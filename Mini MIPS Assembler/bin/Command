@@ -1,1 +1,14 @@
-ORI R1, R0, #1234
+L2:  ORI R1, R0, #1234
+L123: sf sd
+
+dfgd: sddd
+
+J dfgd
+
+DSUBU   R10, R5,  R7
+DDIV   R0, R7
+MFHI  R7
+
+BNEZ   R10, L123
+
+DADDIU R7, R23, #1 ; Hello!!

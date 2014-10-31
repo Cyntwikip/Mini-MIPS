@@ -26,13 +26,7 @@ public class InputHandler {
 		
 		//System.out.println(line);
 		
-		line = line.toUpperCase();
-		
-		String[] parts;
-		
-		parts = line.split(";");
-		
-		str = stringSeparator(parts[0]);
+		str = stringSeparator(line);
 		
 		return str;
 	}
@@ -63,7 +57,5 @@ public class InputHandler {
 		
 		return str;
 	}
-	
-	
 	
 }

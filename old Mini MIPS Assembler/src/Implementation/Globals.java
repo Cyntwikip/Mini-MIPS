@@ -3,7 +3,7 @@ package Implementation;
 public class Globals {
 	
 	public static final String instructions[] = new String[16];
-	public static final int opcode[] = new int[16];
+	//public static final int opcode;
 	
 	//public static final instructions[0] = "DADDU";
 	
@@ -26,8 +26,7 @@ public class Globals {
 		instructions[14] = "ORI";
 		
 		instructions[15] = "J";		
-		
-		
+		/*
 		opcode[0] = 0;
 		opcode[1] = 0;
 		opcode[2] = 0;
@@ -35,7 +34,6 @@ public class Globals {
 		opcode[4] = 0;
 		opcode[5] = 0;
 		opcode[6] = 0;
-		
 		opcode[7] = 5;
 		opcode[8] = 35;
 		opcode[9] = 39;
@@ -44,9 +42,8 @@ public class Globals {
 		opcode[12] = 63;
 		opcode[13] = 25;
 		opcode[14] = 13;
-		
 		opcode[15] = 2;
-		
+		*/
 		
 	}
 

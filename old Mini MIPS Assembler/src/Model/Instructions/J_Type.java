@@ -3,7 +3,7 @@
  */
 package Model.Instructions;
 
-import Utilities.Utilities;
+import Utilities.Conversion;
 
 /**
  * @author Cyntwikip
@@ -22,7 +22,7 @@ public class J_Type implements InstructionFormat {
 	public String convert(String instruction) {
 		// TODO Auto-generated method stub
 		
-		Utilities c = new Utilities();
+		Conversion c = new Conversion();
 		
 		String strOpcode;
 		String strOffset;
