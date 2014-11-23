@@ -19,3 +19,18 @@ There is a sample1.txt and sample2.txt in the same folder.
 
 sample1.txt must run.
 sample2.txt must not run
+sample3.txt passed the test but pipelining will be impossible..
+
+Here is the input:
+0007502Fh
+15400002h
+65450012h
+
+This translates to:
+		DSUBU R10, R0, R7
+		BNEZ R10, L123
+L123: 	DADDIU R5, R10, #12
+
+R7 does not have a value yet so this input should have a problem with pipelining.
+You can make a pipeline along the way and when it encounters an error like this, just stop and say that this kind of error occurred.
+
