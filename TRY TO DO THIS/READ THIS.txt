@@ -7,12 +7,12 @@ Ex.
 L123: 	DADDIU R5, R10, #12
 
 000000 00000 00000 01010 00000 101111
-000101 01010 00000 0000000000000010
+000101 01010 00000 0000000000000000
 011001 01010 00101 0000 0000 0001 0010
 
 so... this will be the input:
 0000502Fh
-15400002h
+15400000h
 65450012h
 
 There is a sample1.txt and sample2.txt in the same folder.
@@ -23,7 +23,7 @@ sample3.txt passed the test but pipelining will be impossible..
 
 Here is the input:
 0007502Fh
-15400002h
+15400000h
 65450012h
 
 This translates to:
