@@ -1,0 +1,55 @@
+
+public class CommandChecker {
+
+	public void check() {
+	
+		Instruction[] instlist = null;
+		
+		LoadData ld = new LoadData();
+		
+		instlist = ld.getAllCommands();
+	
+		//?
+		for(int i=0:instlist) {
+			Instruction inst = inslist[i];
+			
+			if(inst.isError() == true) {
+				
+			}
+			
+			else {
+				SearchData sd = new SearchData();
+				
+				String str = inst.getCommand();
+								
+				if(sd.searchJType(str)) {
+					JType...
+				}
+				
+				else if(sd.searchIType(str)) {
+					IType...
+				}
+				
+				else if(sd.searchRType(str)) {
+					RType...
+				}
+				
+				else {
+				
+				}
+				
+				
+			}
+			
+		
+		}
+		
+	
+	}
+
+
+
+
+
+
+}
