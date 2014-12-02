@@ -17,7 +17,8 @@ public class Home {
 	protected Shell shell;
 	
 	private static String text = "";
-	private static String answer = "123";
+	private static String answerHex = "";
+	private static String answerBin = "";
 
 	/**
 	 * Launch the application.
@@ -52,15 +53,19 @@ public class Home {
 	 */
 	protected void createContents() {
 		shell = new Shell();
-		shell.setSize(722, 461);
+		shell.setSize(894, 541);
 		shell.setText("SWT Application");
 		
 		StyledText textArea1 = new StyledText(shell, SWT.BORDER);
-		textArea1.setBounds(10, 60, 306, 352);
+		textArea1.setBounds(10, 60, 315, 432);
 		
 		StyledText textArea2 = new StyledText(shell, SWT.BORDER);
 		textArea2.setEditable(false);
-		textArea2.setBounds(397, 60, 299, 244);
+		textArea2.setBounds(378, 60, 237, 315);
+		
+		StyledText textArea3 = new StyledText(shell, SWT.BORDER);
+		textArea3.setEditable(false);
+		textArea3.setBounds(631, 60, 237, 315);
 		
 		Button button1 = new Button(shell, SWT.NONE);
 		button1.setFont(SWTResourceManager.getFont("Segoe UI", 16, SWT.NORMAL));
@@ -75,10 +80,11 @@ public class Home {
 				//System.out.println(text);
 				a.compile();
 				//textArea2.setText(answer);
-				textArea2.setText(answer);
+				textArea2.setText(answerHex);
+				textArea3.setText(answerBin);
 			}
 		});
-		button1.setBounds(483, 333, 152, 64);
+		button1.setBounds(558, 403, 152, 64);
 		button1.setText("Run");
 		
 		Label lblTypeYourCode = new Label(shell, SWT.NONE);
@@ -89,7 +95,7 @@ public class Home {
 		Label lblThisIsThe = new Label(shell, SWT.NONE);
 		lblThisIsThe.setText("This is the output");
 		lblThisIsThe.setFont(SWTResourceManager.getFont("Segoe UI", 12, SWT.NORMAL));
-		lblThisIsThe.setBounds(483, 10, 164, 29);
+		lblThisIsThe.setBounds(558, 10, 164, 29);
 
 	}
 	
@@ -97,7 +103,11 @@ public class Home {
 		return text;
 	}
 	
-	public void setAnswer(String answer) {
-		this.answer = answer;
+	public void setAnswerHex(String answer) {
+		answerHex = answer;
+	}
+	
+	public void setAnswerBin(String answer) {
+		answerBin = answer;
 	}
 }

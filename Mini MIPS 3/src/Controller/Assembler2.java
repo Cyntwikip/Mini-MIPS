@@ -59,13 +59,46 @@ public class Assembler2 {
 		CommandLine cl = new CommandLine();
 		cl.display(opcodes);
 		
-		String answer = "";
+		String answerHex = "";
 		
 		for(int i=0; i<opcodes.size(); i++) {
-			answer += opcodes.get(i) +"\n";
+			answerHex += opcodes.get(i) +"\n";
 		}
 		
-		h.setAnswer(answer);
+		h.setAnswerHex(answerHex);
+		
+		//for Binary
+		
+		Utilities u = new Utilities();
+		String answerBin = "";
+		
+		ArrayList<Instruction> instlist = new ArrayList<Instruction>();
+		
+		instlist = cdao.getAllCommands();
+		String str;
+		boolean error = false;
+		
+		for(int i=0; i<instlist.size(); i++) {
+			inst = instlist.get(i);
+			if(inst.isError() == true)
+				error = true;
+		}
+		
+		if(error == true) {
+			h.setAnswerBin(answerBin);
+		}
+		
+		else {		
+			for(int i=0; i<opcodes.size(); i++) {
+				String temp = opcodes.get(i);
+				temp = temp.substring(0, temp.length()-1);
+				temp = u.hexToBin(temp);
+				temp = u.pad0(temp, 32);
+				
+				answerBin += temp + "\n";
+			}		
+			h.setAnswerBin(answerBin);
+		}
 		
 		//String test = Utilities.hexToBin("FAC0");
 		//System.out.println(test);
